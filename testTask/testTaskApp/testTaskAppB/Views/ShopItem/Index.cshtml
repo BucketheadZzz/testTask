@@ -1,0 +1,27 @@
+﻿@model List<testTaskAppB.BusinessLogic.BusinessObjects.ShopItemModel>
+
+@{
+    ViewData["Title"] = "Shop details";
+}
+
+<table class="table hover-grid">
+    <thead>
+        <tr>
+            <th>Shop item name</th>
+            <th>Shop item description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shop in Model)
+        {
+            <tr>
+                <td>
+                    @shop.Name
+                </td>
+                <td>
+                    @shop.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

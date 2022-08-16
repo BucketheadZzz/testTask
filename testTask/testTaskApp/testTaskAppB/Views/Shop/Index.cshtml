@@ -1,0 +1,35 @@
+﻿@model List<testTaskAppB.BusinessLogic.BusinessObjects.ShopModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table hover-grid">
+    <thead>
+        <tr>
+            <th>Shop name</th>
+            <th>Shop address</th>
+            <th>Shop working schedule</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shop in Model)
+        {
+            <tr>
+                <td>
+                    @shop.Name
+                </td>
+                <td>
+                    @shop.Address
+                </td>
+                <td>
+                    @shop.WorkingSchedule
+                </td>
+                <td>
+                    <a asp-action="Index" asp-controller="ShopItem" asp-route-id="@shop.Id">Go to shop</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
