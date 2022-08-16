@@ -17,7 +17,7 @@ namespace testTaskAppB.BusinessLogic.Services
             _mapper = mapper;
         }
 
-        public async Task<List<ShopModel>> GetAllShops()
+        public async Task<List<ShopModel>> GetAllShopsAsync()
         {
             var entities =  await _shopRepository.GetAsync();
             var result = _mapper.Map<List<ShopModel>>(entities);

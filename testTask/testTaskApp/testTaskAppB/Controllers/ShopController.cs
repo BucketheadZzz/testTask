@@ -14,7 +14,7 @@ namespace testTaskAppB.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var shops = await _shopService.GetAllShops();
+            var shops = await _shopService.GetAllShopsAsync();
             return View(shops);
         }
     }

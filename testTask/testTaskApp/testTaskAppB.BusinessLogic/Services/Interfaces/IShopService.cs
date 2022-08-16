@@ -6,6 +6,6 @@ namespace testTaskAppB.BusinessLogic.Services.Interfaces
 {
     public interface IShopService
     {
-        Task<List<ShopModel>> GetAllShops();
+        Task<List<ShopModel>> GetAllShopsAsync();
     }
 }
